@@ -39,4 +39,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-Feito com ❤️ por [Seu Nome](https://github.com/charlieheinikis)
+Feito com ❤️ por [Charles](https://github.com/charlieheinikis)
