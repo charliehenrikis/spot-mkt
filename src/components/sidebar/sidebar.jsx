@@ -64,28 +64,11 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
             <i className="fas fa-cog w-5 text-center"></i>
             <span>Configurações</span>
           </li>
-
-          {/* Social Media Icons */}
-          <div className="mt-auto pb-4">
-            <div className="flex justify-center gap-4 text-white">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
-                <i className="fab fa-github text-xl"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
-                <i className="fab fa-twitter text-xl"></i>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
-                <i className="fab fa-linkedin text-xl"></i>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
-                <i className="fab fa-instagram text-xl"></i>
-              </a>
-            </div>
-          </div>
         </ul>
       </nav>
     </>
   );
 };
+
 
 export default Sidebar;

@@ -11,6 +11,16 @@
     top: 0;
     left: 0;
 
+    .foto-esquerda {
+        display: none; /* Hide by default on mobile */
+    }
+
+    @media (min-width: 768px) {
+        .foto-esquerda {
+            display: block; /* Show on screens wider than 768px */
+            width: 50%;
+        }
+    }
 
     .login-form-container {
         border-radius: 0.75rem;
@@ -151,11 +161,6 @@
         background-color: rgba(31, 41, 55, 1);
         transition: all 0.2s ease;
         cursor: pointer;
-    }
-
-    .login-social-icons .login-icon:hover {
-        background-color: rgba(55, 65, 81, 1);
-        border-color: rgba(167, 139, 250, 1);
     }
 
     .login-social-icons .login-icon svg {
