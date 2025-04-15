@@ -1,0 +1,33 @@
+/* Footer Styles */
+.dashboard-footer {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid #edf2f7;
+  margin-top: 2rem;
+  margin-left: 250px;
+}
+
+.dashboard-footer p {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 992px) {
+  .dashboard-footer {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-footer {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-footer {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+}
