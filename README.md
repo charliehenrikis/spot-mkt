@@ -1,12 +1,42 @@
-# React + Vite
+# 🚀 Spot Mkt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Aplicação para análise de mercado com interface moderna e responsiva
 
-Currently, two official plugins are available:
+## ⚙️ Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React** - Biblioteca JavaScript para interfaces
+- 🎨 **Tailwind CSS** - Framework CSS utilitário
 
-## Expanding the ESLint configuration
+## ✨ Principais Recursos
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ **Login Seguro** - Autenticação com validação de dados
+- 📊 **Dashboard ** - Visualização de dados estaticos
+- 📱 **Design Responsivo** - Funciona em qualquer dispositivo
+
+## 🚀 Demonstração
+
+Acesse o projeto implantado na [Vercel](https://spot-mkt-cyan.vercel.app/)
+
+## 🛠️ Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/spot-mkt.git
+
+# Entre na pasta do projeto
+cd spot-mkt
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
+npm run dev
+```
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Feito com ❤️ por [Seu Nome](https://github.com/charlieheinikis)
