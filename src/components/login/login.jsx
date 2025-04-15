@@ -113,21 +113,21 @@ const LoginForm = () => {
   }
 
   return (
-    <div className='block-login flex'>
-      <div className="foto-esquerda w-1/2">
-        <img 
-          src="https://spotmkt.com.br/wp-content/uploads/2023/02/Marketing-Digital-SPOT.webp" 
+    <div className='block-login flex flex-col md:flex-row'>
+      <div className="foto-esquerda md:w-1/2">
+        <img
+          src="https://spotmkt.com.br/wp-content/uploads/2023/02/Marketing-Digital-SPOT.webp"
           alt="Login Illustration"
           className="w-full h-full object-cover"
           loading="lazy"
         />
       </div>
-      <div className="w-1/2 flex items-center justify-center">
+      <div className="w-full md:w-1/2 flex items-center justify-center">
         <div className="login-form-container">
-          <img 
-            src="https://spotmkt.com.br/wp-content/uploads/2023/05/Logo-SPOT-MKT-300x70.png" 
+          <img
+            src="https://spotmkt.com.br/wp-content/uploads/2023/05/Logo-SPOT-MKT-300x70.png"
             alt="Login Illustration"
-            className="w-full h-64 object-cover rounded-lg mb-6"
+            className="w-full h-32 md:h-64 object-cover rounded-lg mb-6"
             loading="lazy"
           />
           <p className="login-title mt-5">Faça login com suas credenciais </p>
@@ -177,10 +177,16 @@ const LoginForm = () => {
               <i className="fab fa-github fa-lg"></i>
             </button>
           </div>
-          <div className="login-signup">
-            <p>Não tem uma conta?</p>
+          <div className="flex flex-col items-center justify-center space-y-1 text-center sm:flex-row sm:space-x-2 sm:space-y-0 w-full">
+            <p className="text-gray-600">Não tem uma conta?</p>
             <p>
-              <a rel="noopener noreferrer" href="#" className="">Crie agora</a>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                className="font-medium text-blue-600 transition-colors hover:text-blue-800 hover:underline"
+              >
+                Crie agora
+              </a>
             </p>
           </div>
         </div>

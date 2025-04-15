@@ -1,32 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './sidebar.css';
 import { Link } from 'react-router-dom';
 
 const Sidebar = ({ activeTab, setActiveTab }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <nav className="dashboard-nav">
-      <ul>
-        <li className={activeTab === 'dashboard' ? 'active' : ''}>
-          <Link to="/dashboard" onClick={() => setActiveTab('dashboard')}>
-            <i className="fas fa-home"></i> Dashboard
-          </Link>
-        </li>
-        <li className={activeTab === 'projects' ? 'active' : ''}>
-          <span onClick={() => setActiveTab('projects')}>
-            <i className="fas fa-project-diagram"></i> Projetos
-          </span>
-        </li>
-        <li className={activeTab === 'clients' ? 'active' : ''} onClick={() => setActiveTab('clients')}>
-          <i className="fas fa-users"></i> Clientes
-        </li>
-        <li className={activeTab === 'reports' ? 'active' : ''} onClick={() => setActiveTab('reports')}>
-          <i className="fas fa-chart-bar"></i> Relatórios
-        </li>
-        <li className={activeTab === 'settings' ? 'active' : ''} onClick={() => setActiveTab('settings')}>
-          <i className="fas fa-cog"></i> Configurações
-        </li>
-      </ul>
-    </nav>
+    <>
+      {/* Hamburger button for mobile */}
+      <button 
+        className="fixed top-4 left-4 z-50 p-2 rounded-md bg-[#29313A] text-white lg:hidden"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+      </button>
+
+      {/* Overlay for mobile */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        ></div>
+      )}
+
+      <nav className={`dashboard-nav ${isMobileMenuOpen ? 'translate-x-0' : ''}`}>
+        <ul className="flex flex-col h-full">
+          <li className={`${activeTab === 'dashboard' ? 'active' : ''} flex items-center gap-3`}>
+            <Link to="/dashboard" onClick={() => {
+              setActiveTab('dashboard');
+              setIsMobileMenuOpen(false);
+            }}>
+              <i className="fas fa-home w-5 text-center"></i>
+              <span>Dashboard</span>
+            </Link>
+          </li>
+          <li className={`${activeTab === 'projects' ? 'active' : ''} flex items-center gap-3`}>
+            <Link to="/projects" onClick={() => {
+              setActiveTab('projects');
+              setIsMobileMenuOpen(false);
+            }}>
+              <i className="fas fa-project-diagram w-5 text-center"></i>
+              <span>Projetos</span>
+            </Link>
+          </li>
+          <li className={`${activeTab === 'clients' ? 'active' : ''} flex items-center gap-3`} onClick={() => {
+            setActiveTab('clients');
+            setIsMobileMenuOpen(false);
+          }}>
+            <i className="fas fa-users w-5 text-center"></i>
+            <span>Clientes</span>
+          </li>
+          <li className={`${activeTab === 'reports' ? 'active' : ''} flex items-center gap-3`} onClick={() => {
+            setActiveTab('reports');
+            setIsMobileMenuOpen(false);
+          }}>
+            <i className="fas fa-chart-bar w-5 text-center"></i>
+            <span>Relatórios</span>
+          </li>
+          <li className={`${activeTab === 'settings' ? 'active' : ''} flex items-center gap-3`} onClick={() => {
+            setActiveTab('settings');
+            setIsMobileMenuOpen(false);
+          }}>
+            <i className="fas fa-cog w-5 text-center"></i>
+            <span>Configurações</span>
+          </li>
+
+          {/* Social Media Icons */}
+          <div className="mt-auto pb-4">
+            <div className="flex justify-center gap-4 text-white">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
+                <i className="fab fa-github text-xl"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
+                <i className="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
+                <i className="fab fa-linkedin text-xl"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F89938] transition-colors">
+                <i className="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </>
   );
 };
 
